@@ -6,13 +6,22 @@ def read_data():
 def guess_word():
 	guess_char = input("Provide character which key word contain: ")
 	return guess_char
-def check_char(key_word,guess_char):
+def check_answer(read_data,guess_word):
+	return answer_characters
+def check_char(key_word):
+	bad_answers=0
 	answer_characters = ['_' for i in range(len(key_word))]
-	# for char in key_word:
-	for count, char in enumerate(key_word):
-		if char == guess_char:
-			answer_characters.pop(count)
-			answer_characters.insert(count,guess_char)
-	print(answer_characters)		
+	while key_word != answer_characters:
+		guess_char = input("Provide character which key word contain: ")
+		for count, char in enumerate(key_word):
+			if char == guess_char:
+				answer_characters.pop(count)
+				answer_characters.insert(count,guess_char)
+		print(answer_characters)
+			# else:
+			# 	bad_answers+=1
 
-check_char(read_data(),guess_word())
+					
+
+check_char(read_data())
+
