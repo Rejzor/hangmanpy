@@ -99,6 +99,6 @@ def check_char(key_word):
 			break	
 		print(answer_characters)
 					
-
-check_char(read_data())
+if __name__ == "__main__":
+	check_char(read_data())
 
